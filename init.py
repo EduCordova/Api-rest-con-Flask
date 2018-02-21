@@ -35,7 +35,7 @@ def bad_request(error):
 def unprocessable_entity(error):
     return jsonify(generate_response(422,error='unprocessable_entity'))
 
-#ENDPOINTS => Son las rutas de nuestros servicios  restFull
+#ENDPOINTS
 @app.route('/codigo/api/v1.0/courses',methods=['GET'])#wrap o decorador
 def get_courses():
     courses  = Course.select() #select * from course
